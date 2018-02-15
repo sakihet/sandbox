@@ -21,6 +21,14 @@ for (let i = 0; i < process.argv.length; i++) {
   }
 }
 
+const double = value => {
+  return value * 2
+}
+
+const triple = value => {
+  return value * 3
+}
+
 if (optionFlag) {
   console.log(`v${VERSION}`)
 } else if (doubleCommandFlag) {
@@ -29,12 +37,4 @@ if (optionFlag) {
   console.log(triple(value))
 } else {
   console.log(`${command} command is missing`)
-}
-
-function double(value) {
-  return value * 2
-}
-
-function triple(value) {
-  return value * 3
 }
