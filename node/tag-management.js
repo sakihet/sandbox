@@ -44,3 +44,14 @@ ary.forEach(str => {
   console.log('parsed tags: ', tags)
   addTags(tags)
 })
+
+console.log('get names by ids')
+let params = [1, 3]
+let names = []
+params.forEach(e => {
+  if (tags.find(x => x.id === e)) {
+    names.push(tags.find(x => x.id === e).name)
+  }
+})
+console.log('names:')
+console.log(names)
