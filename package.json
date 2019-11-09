@@ -12,5 +12,8 @@
     "commander": "^2.14.1",
     "markdown-it": "^8.4.2",
     "puppeteer": "^1.0.0"
+  },
+  "devDependencies": {
+    "uuid": "^3.3.3"
   }
 }
