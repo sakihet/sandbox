@@ -1,3 +1,5 @@
+const uuidv4 = require('uuid/v4')
+
 class Model {
   constructor (
     created = undefined,
@@ -18,7 +20,7 @@ class Task extends Model {
     {
       name,
       isClosed = false,
-      id = undefined,
+      id = uuidv4(),
       created = undefined,
       updated = undefined
     } = {}
@@ -53,7 +55,7 @@ t.updateName('new name')
 console.log(t)
 
 let taskObj = {
-  id: 123,
+  id: 'ba6fb329-4b9f-4537-9ed7-d0d97fc7f64b',
   name: 'buy milk',
   isClosed: true,
   created: '2019-01-01T10:00:00.000Z',
