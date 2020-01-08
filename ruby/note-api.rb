@@ -8,5 +8,14 @@ def get_users
   JSON.parse(res)
 end
 
+def get_notes
+  res = Net::HTTP.get(URI("#{BASE_URI}/notes"))
+  JSON.parse(res)
+end
+
 users = get_users()
 p users
+
+puts ''
+notes = get_notes()
+p notes
