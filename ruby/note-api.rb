@@ -13,9 +13,18 @@ def get_notes
   JSON.parse(res)
 end
 
+def get_categories
+  res = Net::HTTP.get(URI("#{BASE_URI}/categories"))
+  JSON.parse(res)
+end
+
 users = get_users()
 p users
 
 puts ''
 notes = get_notes()
 p notes
+
+puts ''
+categories = get_categories()
+p categories
